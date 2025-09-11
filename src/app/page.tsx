@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navigator from "./components/navigator";
 import { skills } from '../skilldata';
+import Image from "next/image";
 
 
 export default function Home() {
@@ -13,7 +14,13 @@ export default function Home() {
           skills.map((skills) => (
             <Link href={`/${skills.name}`} key={skills.id}>
               <div className="flex justify-center aspect-[1.4] overflow-hidden">
-                <img src={skills.img} className="scale-110 hover:scale-120 transition-transform duration-300 ease-in-out" />
+                <Image
+                  src={skills.img}
+                  alt={skills.name}
+                  width={260}
+                  height={185}
+                  className="scale-110 hover:scale-125 transition-transform duration-300 ease-in-out rounded-lg"
+                />
               </div>
             </Link>
           ))

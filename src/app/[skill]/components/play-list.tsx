@@ -101,7 +101,7 @@ const MenuItemUl = ({ changeSong }: { changeSong: (changeBgImg: string) => void 
         <motion.ul variants={menuItemUlVariants}
             className="pt-3 overflow-y-auto overflow-x-hidden h-[90%] md:h-[94%]">
             {songs.map((song, index) => (
-                <MenuItem i={index} key={index} song={song} changeSong={changeSong} />
+                <MenuItem key={index} song={song} changeSong={changeSong} />
             ))}
         </motion.ul>
     )
@@ -127,7 +127,7 @@ const itemVariants = {
 
 
 // 곡 li
-const MenuItem = ({ i, song, changeSong }: { i: number, song: Songs, changeSong: (changeBgImg: string) => void }) => {
+const MenuItem = ({ song, changeSong }: { song: Songs, changeSong: (changeBgImg: string) => void }) => {
     const menuItemIconCSS =
         " w-12 h-12 rounded-full flex-none mr-5 bg-cover bg-center ";
     const menuItemTextCSS = "flex-1 text-left truncate text-gray-400 font-semibold [font-family:ui-monospace]";

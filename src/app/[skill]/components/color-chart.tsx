@@ -35,7 +35,7 @@ export default function Color_chart() {
         return () => {
             document.removeEventListener("mousedown", ClickColor_infoDivOutside);
         };
-    }, []);
+    }, [ClickColor_infoDivOutside]);
 
     const clickColor = (color: Colors) => {
         setOpenColor(true);
@@ -97,7 +97,7 @@ export default function Color_chart() {
                     colors.map((color) => (
                         <button
                             key={color.name}
-                            className="w-[150px] h-[150px] rounded-[60%_43%_40%_50%_/_50%_40%_60%_50%]"
+                            className="w-[150px] h-[150px] rounded-[60%_43%_40%_50%_/_50%_40%_60%_50%] cursor-pointer"
                             style={{ backgroundColor: color.code }}
                             onClick={() => { clickColor(color) }}>
                         </button>

@@ -11,9 +11,10 @@ export default async function SkillPage({
     let SkillComponent: React.ComponentType;
 
     try {
-        const module = await import(`./components/${componentName}`);
-        SkillComponent = module.default;
+        const importComponent = await import(`./components/${componentName}`);
+        SkillComponent = importComponent.default;
     } catch (error) {
+        console.log(error)
         SkillComponent = NotFound;
     }
 
