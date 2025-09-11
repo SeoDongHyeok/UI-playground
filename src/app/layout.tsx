@@ -3,7 +3,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Skill Hub",
+  title: "UI playground",
   description: "애니메이션과 인터랙션을 통해 시각적으로 표현하는 웹사이트입니다.",
 };
 

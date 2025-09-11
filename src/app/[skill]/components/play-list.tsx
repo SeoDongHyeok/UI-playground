@@ -168,69 +168,70 @@ export default function PlayList() {
     };
 
     return (
-        <div className="
-                flex w-100 h-64 rounded-[20px] relative
+        <div className="flex items-center justify-center w-full h-full  bg-[#d1d1d1]">
+            <div className="
+                flex w-100 h-64 rounded-[20px] relative overflow-hidden
                 md:w-190 md:h-130
             "
-        >
-            <motion.div
-                className="absolute inset-0 rounded-[20px]"
-                animate={
-                    isChangedSong
-                        ? { filter: ["brightness(0)", "brightness(0.5)"] }
-                        : {}
-                }
-                style={{
-                    backgroundImage: bgImg,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    filter: "brightness(0.5)"
-                }}
-                onAnimationComplete={() => setIsChangedSong(false)}
-            ></motion.div>
-            <motion.nav
-                initial={{ width: "0px" }}
-                className="bg-[white] h-full z-1"
-                animate={{
-                    width: isOpen ? navWidth : "0px",
-                }}
-                transition={{
-                    width: { duration: 0.4, delay: isOpen ? 0 : 0.5 },
-                }}
             >
                 <motion.div
-                    className="p-4 h-full"
-                    initial={false}
-                    variants={navVariant}
-                    animate={isOpen ? "open" : "closed"}
-                >
-                    <MenuToggle toggle={() => setIsOpen(!isOpen)} />
-                    <MenuItemUl changeSong={changeSong} />
-                </motion.div>
-            </motion.nav>
-            <div className="self-center w-48 h-48 scale-50 relative md:scale-120 md:ml-35">
-                <motion.img
+                    className="absolute inset-0 rounded-[20px]"
                     animate={
                         isChangedSong
-                            ? { filter: ["brightness(0)", "brightness(1)"] }
+                            ? { filter: ["brightness(0)", "brightness(0.5)"] }
                             : {}
                     }
-                    ref={imgRef}
-                    className="w-48 h-48 rounded-full animate-spin-slow"
-                    style={{ backgroundImage: bgImg }} />
-                <div className="absolute bottom-2 left-22 w-24 h-24 overflow-hidden scale-110 [filter:blur(2px)]">
-                    <div className="
+                    style={{
+                        backgroundImage: bgImg,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        filter: "brightness(0.5)"
+                    }}
+                    onAnimationComplete={() => setIsChangedSong(false)}
+                ></motion.div>
+                <motion.nav
+                    initial={{ width: "0px" }}
+                    className="bg-[white] h-full z-1"
+                    animate={{
+                        width: isOpen ? navWidth : "0px",
+                    }}
+                    transition={{
+                        width: { duration: 0.4, delay: isOpen ? 0 : 0.5 },
+                    }}
+                >
+                    <motion.div
+                        className="p-4 h-full"
+                        initial={false}
+                        variants={navVariant}
+                        animate={isOpen ? "open" : "closed"}
+                    >
+                        <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+                        <MenuItemUl changeSong={changeSong} />
+                    </motion.div>
+                </motion.nav>
+                <div className="self-center w-48 h-48 scale-50 relative md:scale-120 md:ml-35">
+                    <motion.img
+                        animate={
+                            isChangedSong
+                                ? { filter: ["brightness(0)", "brightness(1)"] }
+                                : {}
+                        }
+                        ref={imgRef}
+                        className="w-48 h-48 rounded-full animate-spin-slow"
+                        style={{ backgroundImage: bgImg }} />
+                    <div className="absolute bottom-2 left-22 w-24 h-24 overflow-hidden scale-110 [filter:blur(2px)]">
+                        <div className="
                         w-48 h-48 rounded-full bg-[#000000a6] -translate-x-24 -translate-y-24">
+                        </div>
                     </div>
-                </div>
-                <div className="absolute bottom-[-1] left-24 w-24 h-24 overflow-hidden scale-120">
-                    <div className="
+                    <div className="absolute bottom-[-1] left-24 w-24 h-24 overflow-hidden scale-120">
+                        <div className="
                         w-48 h-48 rounded-full [background:linear-gradient(-180deg,#000000_4%,#47494b_98%),radial-gradient(at_top_left,rgba(255,255,255,0.1)_0%,rgba(0,0,0,0.3)_100%)] -translate-x-24 -translate-y-24">
+                        </div>
                     </div>
                 </div>
-            </div>
-
-        </div >
+            </div >
+        </div>
     )
 }
 

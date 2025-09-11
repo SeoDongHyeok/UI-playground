@@ -22,6 +22,15 @@
   background-color: #ffffff;
 }
 
+img,
+a {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
