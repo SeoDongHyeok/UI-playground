@@ -35,12 +35,11 @@ function SkillsSlideMenu() {
             }}
             className="shadow-xl rounded-lg"
           >
-            <div className="relative">
+            <div className="relative w-[260px] h-[185px]">
               <Image
                 src={skill.img}
                 alt={skill.name}
-                width={260}
-                height={185}
+                fill
                 className="aspect-video rounded-lg"
               />
               <div className="
