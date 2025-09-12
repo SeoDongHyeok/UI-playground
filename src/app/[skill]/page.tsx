@@ -19,7 +19,7 @@ export default async function SkillPage({
     }
 
     return (
-        <div className="w-full h-screen flex flex-col items-center justify-center text-center">
+        <div className="w-full h-full flex flex-col items-center justify-center text-center">
             <SkillComponent />
         </div>
     );

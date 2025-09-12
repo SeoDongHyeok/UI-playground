@@ -50,7 +50,7 @@ export default function Color_chart() {
 
 
     return (
-        <div>
+        <div className="h-screen [align-content:center]">
             <AnimatePresence>
                 {
                     openColor ?

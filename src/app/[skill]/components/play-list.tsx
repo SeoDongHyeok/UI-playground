@@ -168,7 +168,7 @@ export default function PlayList() {
     };
 
     return (
-        <div className="flex items-center justify-center w-full h-full  bg-[#d1d1d1]">
+        <div className="flex items-center justify-center w-full h-screen  bg-[#d1d1d1]">
             <div className="
                 flex w-100 h-64 rounded-[20px] relative overflow-hidden
                 md:w-190 md:h-130
