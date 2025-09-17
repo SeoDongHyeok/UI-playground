@@ -48,7 +48,7 @@ function SkillsSlideMenu() {
         style={{ opacity: rightOpacity }}
       />
       <motion.div
-        className="flex gap-10 w-fit"
+        className="flex gap-10 w-fit "
         ref={allSkillsDiv}
         drag="x"
         dragConstraints={{
@@ -70,7 +70,7 @@ function SkillsSlideMenu() {
               }
               setDragX(0); // 클릭 후 초기화
             }}
-            className="shadow-xl rounded-lg"
+            className="backdrop-blur-lg rounded-xl shadow-lg"
           >
             <div className="relative w-[260px] h-[185px]">
               <Image
@@ -122,6 +122,13 @@ export default function Home() {
                   <div className="flex flex-col">
                     <p className="font-medium text-gray-700">THREE JS</p>
                     <p className="text-gray-500 text-sm">CSS 3D 시각화 애니메이션</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 mt-2 h-2 w-2 rounded-full bg-gray-400"></div>
+                  <div className="flex flex-col">
+                    <p className="font-medium text-gray-700">Chat UI</p>
+                    <p className="text-gray-500 text-sm">채팅 인터페이스 웹 UI</p>
                   </div>
                 </li>
               </ul>
