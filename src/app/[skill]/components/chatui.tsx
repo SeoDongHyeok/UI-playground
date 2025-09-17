@@ -85,7 +85,7 @@ export default function ChatUI() {
             }
         }
         if (messageWriting)
-            setMessages((prev) => [...prev, { chatText: "__TYPING__", participant: "me" as "me" }])
+            setMessages((prev) => [...prev, { chatText: "__TYPING__", participant: "me" }])
         else {
             setMessages((prev) => [...prev.filter(msg => msg.chatText !== "__TYPING__")]);
         }
@@ -133,16 +133,17 @@ export default function ChatUI() {
         setTimeout(() => {
             setMessages((prev) => {
                 const typingIndex = prev.findIndex(msg => msg.chatText === "__TYPING__");
+                const random = Math.floor(Math.random() * 8);
 
                 if (typingIndex !== -1) {
                     const newMessages = [...prev];
-                    newMessages[typingIndex] = { chatText: "답변", participant: "other" };
+                    newMessages[typingIndex] = { chatText: emojiList[random].symbol, participant: "other" };
                     newMessages.push({ chatText: "__TYPING__", participant: "me" })
                     return newMessages;
                 } else {
                     return [
                         ...prev,
-                        { chatText: "답변", participant: "other" }
+                        { chatText: emojiList[random].symbol, participant: "other" }
                     ];
                 }
             });

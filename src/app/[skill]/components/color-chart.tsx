@@ -24,18 +24,18 @@ export default function Color_chart() {
     const [selColor, setSelColor] = useState<Colors>();
     const colorInfoDiv = useRef<HTMLDivElement>(null);
 
-    const ClickColor_infoDivOutside = (event: MouseEvent) => {
-        if (colorInfoDiv.current && !colorInfoDiv.current.contains(event.target as Node)) {
-            closeColor();
-        }
-    };
-
     useEffect(() => {
+        const ClickColor_infoDivOutside = (event: MouseEvent) => {
+            if (colorInfoDiv.current && !colorInfoDiv.current.contains(event.target as Node)) {
+                closeColor();
+            }
+        };
+
         document.addEventListener("mousedown", ClickColor_infoDivOutside);
         return () => {
             document.removeEventListener("mousedown", ClickColor_infoDivOutside);
         };
-    }, [ClickColor_infoDivOutside]);
+    }, [openColor]);
 
     const clickColor = (color: Colors) => {
         setOpenColor(true);
