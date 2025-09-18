@@ -4,12 +4,12 @@ import React, { useEffect, useState } from "react";
 import { motion } from 'motion/react';
 import { useRef } from "react";
 
-export type Emoji = {
+type Emoji = {
     name: string;
     symbol: string;
 };
 
-export const emojiList: Emoji[] = [
+const emojiList: Emoji[] = [
     { name: "smile", symbol: "😄" },
     { name: "laugh", symbol: "😂" },
     { name: "wink", symbol: "😉" },

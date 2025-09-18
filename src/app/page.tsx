@@ -19,6 +19,7 @@ function SkillsSlideMenu() {
 
 
   useEffect(() => {
+
     if (allSkillsDiv.current) {
       setAllSkillsWidth(allSkillsDiv.current.offsetWidth);
     }
@@ -39,13 +40,13 @@ function SkillsSlideMenu() {
 
   return (
     <motion.div className="relative overflow-x-hidden mt-5 py-5 pl-5 w-full " ref={showSkillsDiv}>
-      <div
-        className="opactiry-0.3 pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#f5f5f5]/100 to-[#f5f5f5]/0 z-10"
-        style={{ opacity: leftOpacity }}
+      <motion.div
+        animate={{ opacity: leftOpacity }}
+        className="opacity-30 pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#f5f5f5]/100 to-[#f5f5f5]/0 z-10"
       />
-      <div
-        className="opactiry-0.3 pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#f5f5f5]/100 to-[#f5f5f5]/0 z-10"
-        style={{ opacity: rightOpacity }}
+      <motion.div
+        animate={{ opacity: rightOpacity }}
+        className="opacity-30 pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#f5f5f5]/100 to-[#f5f5f5]/0 z-10"
       />
       <motion.div
         className="flex gap-10 w-fit "
@@ -124,13 +125,6 @@ export default function Home() {
                     <p className="text-gray-500 text-sm">CSS 3D 시각화 애니메이션</p>
                   </div>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 mt-2 h-2 w-2 rounded-full bg-gray-400"></div>
-                  <div className="flex flex-col">
-                    <p className="font-medium text-gray-700">Chat UI</p>
-                    <p className="text-gray-500 text-sm">채팅 인터페이스 웹 UI</p>
-                  </div>
-                </li>
               </ul>
             </div>
 
@@ -144,8 +138,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex flex-col">
-                    <p className="font-medium text-gray-700">Scroll HighLight</p>
-                    <p className="text-gray-500 text-sm">스크롤 위치에 따른 강조 인터랙션 기능</p>
+                    <p className="font-medium text-gray-700">Movie Film</p>
+                    <p className="text-gray-500 text-sm">무비 포스터 Ticker</p>
                   </div>
                 </li>
                 <li className="flex items-center gap-4">
@@ -155,8 +149,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex flex-col">
-                    <p className="font-medium text-gray-700">Color Chart</p>
-                    <p className="text-gray-500 text-sm">색상 팔레트 코드 시각화</p>
+                    <p className="font-medium text-gray-700">Chat UI</p>
+                    <p className="text-gray-500 text-sm">채팅 인터페이스 웹 UI</p>
                   </div>
                 </li>
                 <li className="flex items-center gap-4">
@@ -166,8 +160,8 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex flex-col">
-                    <p className="font-medium text-gray-700">Play List</p>
-                    <p className="text-gray-500 text-sm">노래 재생 목록 시퀀싱 및 재생 애니메이션</p>
+                    <p className="font-medium text-gray-700">Scroll HighLight</p>
+                    <p className="text-gray-500 text-sm">스크롤 위치에 따른 강조 인터랙션 기능</p>
                   </div>
                 </li>
               </ul>

@@ -79,10 +79,11 @@ interface Songs {
 
 // 곡 리스트 데이터
 const songs: Songs[] = [
-    { songImg: '/img/junni.png', title: 'junni' },
-    { songImg: '/img/coastalworld.png', title: 'coastalworld' },
-    { songImg: '/img/relight.png', title: 'relight' },
-    { songImg: '/img/theatrejs.png', title: 'theatrejs' }];
+    { songImg: '/img/music/Beatles-Abbey_Road.jpg', title: 'Beatles-Abbey Road' },
+    { songImg: '/img/music/BTS_Butter.png', title: 'BTS-Butter' },
+    { songImg: '/img/music/Michaeljackson-dangerous.jpg', title: 'MJ-Dangerous' },
+    { songImg: '/img/music/lady_gaga-The_Fame_Monster.png', title: 'LG-The fame monster' },
+];
 
 // 곡 리스트 출력/지우기 애니메이션을 부드럽게
 const menuItemUlVariants = {
